@@ -38,5 +38,14 @@ class UsersTableSeeder extends Seeder
         $user->email = 'lester@gmail.com';
         $user->avatar = 'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/ZqM7iaP4CR.png?imageView2/1/w/200/h/200';
         $user->save();
+
+        $user2 = User::find(2);
+        $user2->name = 'Andy';
+        $user2->email = 'andy@gmail.com';
+        $user2->avatar = 'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/NDnzMutoxX.png?imageView2/1/w/200/h/200';
+        $user2->save();
+
+        $user->assignRole('Founder');
+        $user2->assignRole('Maintainer');
     }
 }
